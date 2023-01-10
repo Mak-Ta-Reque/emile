@@ -1,0 +1,23 @@
+# @package _global_
+config:
+  MODEL:
+    name: vgg16 #resnet50
+    weight: imagenet
+  EXPLANATION:
+      method: LayerGradCam #["IntegratedGradients", "LayerGradCam"] #LayerGradCam", "IntegratedGradients"] 
+      layer: features[26] #layer4[2].conv3 # According the architecture
+  DATA:
+      type: [diskfile]
+      loader: ImageFolder
+      root: "/workspaces/imagenet-mini/train"
+      batch_size: 1
+      size: (240,240)
+  EVALUATION: ["RegionPerturbation", "RegionPerturbationThreshold"]
+  OUTPUT:
+      path: /workspaces/outputs/abdul
+      override: True
+
+
+
+
+
