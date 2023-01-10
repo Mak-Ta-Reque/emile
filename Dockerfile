@@ -16,4 +16,4 @@ COPY . .
 
 RUN pip install -r requirements_streamlit.txt
 #COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=localhost"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=5009", "--server.address=demo-iml.sb.dfki.de"]
