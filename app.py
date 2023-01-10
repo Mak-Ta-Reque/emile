@@ -200,9 +200,10 @@ with col3:
         threshold = True
     elif ranking_option == "sort":
         threshold = False
-if current_weight_path and next(iter(cifer_test)) and model:
-    explantion, acc, outputs, labels, out_probs = generate_exp(cifer_test, 1, model, explantion_options)
-    st.subheader(f"Model accuracy is {acc} % with output  class: {class_map[outputs[0].detach().item()]}")
+if cifer_test:
+    if current_weight_path and next(iter(cifer_test)) and model:
+        explantion, acc, outputs, labels, out_probs = generate_exp(cifer_test, 1, model, explantion_options)
+        st.subheader(f"Model accuracy is {acc} % with output  class: {class_map[outputs[0].detach().item()]}")
 
 
 exp_list = []
