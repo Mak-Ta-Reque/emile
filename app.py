@@ -93,7 +93,7 @@ with open('conf/config_webapp.yaml') as f:
 config = data["config"]
 data_options = config["DATA"]["root"]
 
-st.sidebar.markdown('<a href="https://www.baidu.com" target="_self">...</a>', unsafe_allow_html=True)
+st.sidebar.markdown('<a href="https://github.com/Mak-Ta-Reque/emile" target="_self">README</a>', unsafe_allow_html=True)
 # Data selection
 input_image = None
 uploaded_file = st.sidebar.file_uploader("Upload the test image", accept_multiple_files=False, type=["jpg", "png"])
