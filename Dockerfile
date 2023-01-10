@@ -7,4 +7,4 @@ RUN pip install -r requirements_streamlit.txt
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=5009", "--server.address=demo-iml.sb.dfki.de"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=5009", "--server.address=172.16.3.189"]
