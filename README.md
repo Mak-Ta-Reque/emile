@@ -11,7 +11,7 @@ Explaining MachIne Learning Explanations User Interface or EMILE-UI is a simple 
 ![Overview Screenshot of EMILE-UI](teaser.png)
 EMILE-UI operates in three steps.
 The numbers in the brackets () correspond to the ones in the UI screenshot. 
-
+- Download the a test image, label file (csv) and weight of resnet18 architecture from `downloads` directory above and follow the steps
  1. Step One
 	 - The user selects the deep learning architecture & uploads the weights (2).
 	 - The user then selects the explanation method and configures its hyperparameters (3). 
