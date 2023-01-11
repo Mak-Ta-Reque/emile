@@ -1,5 +1,5 @@
 FROM python:3.9
-EXPOSE 80
+EXPOSE 8501
 WORKDIR /app
 COPY requirements_streamlit.txt ./requirements_streamlit.txt
 RUN python -m pip install --upgrade pip
@@ -7,4 +7,4 @@ RUN pip install -r requirements_streamlit.txt
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.enableWebsocketCompression=false", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--browser.serverPort=8501","--browser.serverAddress=0.0.0.0"]
