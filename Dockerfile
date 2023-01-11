@@ -7,4 +7,4 @@ RUN pip install -r requirements_streamlit.txt
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.enableWebsocketCompression=false", "--server.port=8501","--browser.gatherUsageStats=flase","--server.headless=true","--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.port=8501","--browser.gatherUsageStats=false","--server.headless=true","--server.address=0.0.0.0"]
